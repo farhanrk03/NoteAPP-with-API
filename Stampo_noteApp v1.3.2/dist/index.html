@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stampo NotePad</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="src/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" />
+    <script defer="defer" src="bundleStampo.js"></script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <note-app-bar app-title="STAMPO NOTEAPP"></note-app-bar
+    ><button id="toggle-form-btn" class="button">+ Tambah Catatan</button>
+    <aside id="note-form-sidebar">
+      <div class="sidebar-header">
+        <h2 class="list-title">Tambah Catatan Baru</h2>
+        <button id="close-sidebar-btn" class="close-btn">&times;</button>
+      </div>
+      <note-form></note-form>
+    </aside>
+    <div id="backdrop" class="backdrop"></div>
+    <main class="flex-grow main-layout">
+      <section class="section-container">
+        <div class="header-section">
+          <h2 id="list-title" class="list-title">NOTE LIST</h2>
+          <button id="toggle-archive-btn" class="button toggle-archive-btn">
+            ARCHIVES
+          </button>
+        </div>
+        <p id="loading-message" class="message-text hidden">LOADING.....</p>
+        <p id="no-notes-message" class="message-text hidden">EMPTY...</p>
+        <div id="notes-list" class="notes-grid"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 STAMPO NOTEAPP BY <b>FRK</b></p>
+    </footer>
+    <div id="notification-box" class="">Catatan berhasil disimpan!</div>
+  </body>
+</html>
